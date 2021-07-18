@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export default function Global({posts}) {
-    // console.log("GLOBALS POST" , posts.blogs)
+    
     const globals = posts
     let i = 0
     return (

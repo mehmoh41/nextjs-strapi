@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 export default function Sport({posts}) {
     const sports = posts.blogs
-    console.log('SPORTS' , posts.blogs)
   return (
     <>
       {/* news by category */}

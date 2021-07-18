@@ -1,7 +1,7 @@
 import Link from "next/link"
 import ImageComponentity from "./ImageComponentity";
 export default function Hero({ posts}) {
-  console.log("POSTS", posts.blogs);
+  
 
   const first = posts.blogs[0]    
   const rest = posts.blogs.slice(1)

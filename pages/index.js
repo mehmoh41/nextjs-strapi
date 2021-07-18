@@ -7,7 +7,7 @@ import Head from 'next/head'
 import Top from "../components/Top";
 
 export default function Home({ container }) {
-  console.log("CONTAINER" , container)
+
   return (
     <>
     <Head>
@@ -34,7 +34,7 @@ export default function Home({ container }) {
         <meta property='og:site_name' content='Componentity' />
       </Head>
     {container.map((item,index)=>{
-      console.log("ITEM" , item)
+
       // item.item.component == "SPO"
       if(item.item.component == "FASHION") {
         return <Hero posts={item} key={index}/>
