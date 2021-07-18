@@ -62,13 +62,13 @@ export default function Family({posts}) {
                 />
               </g>
             </svg>
-            <Link href={`/category2/family`}>
+            <Link href={`/category/family`}>
             <a className="font-semibold inline-block">
               Family
             </a>
             </Link>
           </div>
-          <Link href={`/category2/family`}>
+          <Link href={`/category/family`}>
             <a>See All</a>
           </Link>
         </div>
