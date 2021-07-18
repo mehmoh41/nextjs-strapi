@@ -5,9 +5,9 @@ export default function Top({posts}) {
 
     return (
         <div className="max-w-screen-lg mx-auto p-5 sm:p-10 md:p-16">
-        {top && top.map((t) => {
+        {top && top.map((t,index) => {
                 return (
-                  <div className="rounded overflow-hidden max-w-screen-xl mx-auto">
+                  <div className="rounded overflow-hidden max-w-screen-xl mx-auto" key={index}>
             
                   <div className="sm:flex justify-between items-center pt-4 px-2">
                     <Link href={`post/${t.slug}`}>
