@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { API_URL } from "../config";
 
 export default function Sport({posts}) {
     const sports = posts.blogs
@@ -101,7 +100,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                         <a className="inline-block ml-2">
                           <div className="w-20 h-20 bg-cover bg-center">
                             <img
-                              src={API_URL + sport.image.url}
+                              src={sport.image.url}
                               alt={sport.title}
                             />
                           </div>

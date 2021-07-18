@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { API_URL } from "../config";
 import Image from 'next/image'
 export default function Top({posts}) {
     const top = posts.blogs
@@ -42,7 +41,7 @@ export default function Top({posts}) {
                   <div className="relative mx-auto">
                     <Link href={`post/${t.slug}`}>
                     <a>
-                      <Image src={API_URL + t.image.url} width={800} height={400} className="w-full"/>
+                      <Image src={t.image.url} width={800} height={400} className="w-full"/>
                     </a>
                     </Link>
                     <Link href={`category/top`}>

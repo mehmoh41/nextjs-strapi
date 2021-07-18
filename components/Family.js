@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { API_URL } from "../config";
 export default function Family({posts}) {
     const family = posts.blogs
     return (
@@ -83,7 +82,7 @@ export default function Family({posts}) {
                 <a>
                   <img
                     className="w-full"
-                    src={API_URL + fam.image.url}
+                    src={fam.image.url}
                     alt="Sunset in the mountains"
                   />
                 </a>

@@ -15,7 +15,7 @@ export default function postByCategory({tags}) {
                             <Link href={`/post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="w-20 h-20 bg-cover bg-center">
-                                    <img src={process.env.NEXTJS_PUBLIC_URL + post.image.url} />
+                                    <img src={post.image.url} />
                                 </div>
                             </a>
                             </Link>

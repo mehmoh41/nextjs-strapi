@@ -1,6 +1,5 @@
 import Link from "next/link"
 import ImageComponentity from "./ImageComponentity";
-import { API_URL } from "../config";
 export default function Hero({ posts}) {
   console.log("POSTS", posts.blogs);
 
@@ -82,7 +81,7 @@ export default function Hero({ posts}) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         
               <div className="relative w-full flex items-end justify-start text-left bg-cover bg-center" key={first.id}>
-                <img src={API_URL + first.image.url}/>
+                <img src={first.image.url}/>
               <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
               <div className="absolute top-0 right-0 left-0 mx-5 mt-2 flex justify-between items-center">
                 <Link href={`/post/${first.slug}`}>
@@ -111,7 +110,7 @@ export default function Hero({ posts}) {
                 return (
                   <div className="flex items-start mb-3 pb-3" key={index}>
                     <Link href={`/post/${post.slug}`}>
-                      <ImageComponentity src={API_URL + post.image.formats.thumbnail.url} alt={post.image.alternativeText} classes={'w-20 h-20 mr-3'} />
+                      <ImageComponentity src={post.image.formats.thumbnail.url} alt={post.image.alternativeText} classes={'w-20 h-20 mr-3'} />
                     </Link>
                     
                     <div className="text-sm">

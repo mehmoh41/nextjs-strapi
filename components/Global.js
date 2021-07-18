@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { API_URL } from "../config";
 export default function Global({posts}) {
     // console.log("GLOBALS POST" , posts.blogs)
     const globals = posts

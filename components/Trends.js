@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { API_URL } from "../config";
 export default function Trend({posts}) {
     const tags = posts.tags
     return (

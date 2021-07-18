@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import { API_URL } from "../config";
-import Global from './Global';
 export default function Technology({posts}) {
     const techs = posts.blogs
     return (
@@ -82,7 +80,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                   <Link href={`/post/${tech.slug}`}>
                   <a>
                     <div className="h-56 lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
-                      <img src={API_URL + tech.image.url}/>
+                      <img src={tech.image.url}/>
                     </div>
                   </a>
                   </Link>
