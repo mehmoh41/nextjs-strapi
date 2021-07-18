@@ -10,7 +10,7 @@ export default function Post({post , post_cat}) {
           title="Woman holding a mug"
         >
           {/* image comes here */}
-          {/* <img className="flex justify-center block mx-auto" src={post[0].image.url} alt={post[0].title}/> */}
+          <img className="flex justify-center block mx-auto" src={post[0].image.url} alt={post[0].title}/>
         </div>
         <div className="max-w-screen-lg mx-auto my-10 px-10">
           <h1 className="text-gray-300 font-bold text-3xl mb-2">

@@ -3,8 +3,8 @@ const path = require("path");
 
     module.exports = {
         
-        images: {
-            domains: ['https://res.cloudinary.com']
+        images : {
+            domains: ["res.cloudinary.com"]
         },
         webpack: config => {
             config.resolve.alias['components'] = path.join(__dirname , 'components')

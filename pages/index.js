@@ -105,7 +105,7 @@ export async function getStaticProps() {
     {
       type: 'categories.category_name',
       slug: 'top',
-      limit: 4,
+      limit: 1,
       component: "TOP"
     },
     
