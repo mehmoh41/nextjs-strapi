@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { API_URL } from "../../config";
 
 export default function postByCategory({categories}) {
     console.log('categories' , categories)
@@ -16,7 +15,7 @@ export default function postByCategory({categories}) {
                             <Link href={`/post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="w-20 h-20 bg-cover bg-center">
-                                    <img src={API_URL + post.image.url} />
+                                    <img src={process.env.NEXTJS_PUBLIC_URL + post.image.url} />
                                 </div>
                             </a>
                             </Link>
@@ -44,7 +43,7 @@ export default function postByCategory({categories}) {
     );
 }
 export async function getStaticPaths() {
-    const res = await fetch(`${API_URL}/categories`);
+    const res = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/categories`);
     const categories = await res.json();
   
     const slugs = [];
@@ -66,7 +65,7 @@ export async function getStaticPaths() {
     // If the route is like /posts/1, then params.id is 1
     const { slug } = params;
   
-    const cats = await fetch(`${API_URL}/categories?slug=${slug}`);
+    const cats = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/categories?slug=${slug}`);
     const categories = await cats.json();
   
     return {

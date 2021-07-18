@@ -1,4 +1,3 @@
-import { API_URL } from "../config";
 import Hero from "../components/Hero";
 import Sport from "../components/Sport";
 import Family from "../components/Family";
@@ -114,8 +113,8 @@ export async function getStaticProps() {
   
   let container = []
   for (const item of items) {
-      const res = await fetch(`${API_URL}/posts?${item.type}=${item.slug}&_limit=${item.limit}`)
-      const all_tags = await fetch(`${API_URL}/tags`)
+      const res = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/posts?${item.type}=${item.slug}&_limit=${item.limit}`)
+      const all_tags = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/tags`)
       const tags = await all_tags.json()
       const blogs = await res.json()
       container.push({item: item, blogs: blogs,tags:tags})

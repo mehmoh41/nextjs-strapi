@@ -243,7 +243,7 @@ export default function Post({post , post_cat}) {
 
 
 export async function getStaticPaths() {
-  const res = await fetch(`${API_URL}/posts`);
+  const res = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/posts`);
   const posts = await res.json();
 
   const slugs = [];
@@ -265,8 +265,8 @@ export async function getStaticProps({ params }) {
   // If the route is like /posts/1, then params.id is 1
   const { slug } = params;
 
-  const res = await fetch(`${API_URL}/posts?slug=${slug}`);
-  const cats = await fetch(`${API_URL}/categories`);
+  const res = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/posts?slug=${slug}`);
+  const cats = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/categories`);
 
   const categories = await cats.json();
   const post = await res.json();
@@ -276,7 +276,7 @@ export async function getStaticProps({ params }) {
   });
   
 
-  const post_cats = await fetch(`${API_URL}/posts?categories=${id}&_sort=created_at:DESC&_limit=4`);
+  const post_cats = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/posts?categories=${id}&_sort=created_at:DESC&_limit=4`);
   const post_cat = await post_cats.json();
 
   return {
