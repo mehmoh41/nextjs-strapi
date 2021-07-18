@@ -9,7 +9,7 @@ const { i18n } = require('./next-i18next.config')
             fallbackLng: ['en'],
           },
         images: {
-            domains: ['localhost']
+            domains: ['https://res.cloudinary.com']
         },
         webpack: config => {
             config.resolve.alias['components'] = path.join(__dirname , 'components')
