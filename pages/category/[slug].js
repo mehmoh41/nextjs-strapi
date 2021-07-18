@@ -17,7 +17,7 @@ export default function postByCategory({categories , posts}) {
                 posts.map(post => {
                     return (
                         <div className="flex items-start border p-2" key={post.id}>
-                            <Link href={`post/${post.slug}`}>
+                            <Link href={`/post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="w-20 h-20 bg-cover bg-center">
                                     <img src={post.image.url} />
@@ -26,7 +26,7 @@ export default function postByCategory({categories , posts}) {
                             </Link>
                         
                         <div className="text-sm w-2/3">
-                        <Link href={`post/${post.slug}`}>
+                        <Link href={`/post/${post.slug}`}>
                         <a className="text-gray-400 font-medium hover:text-indigo-600 leading-none">
                                 {post.title}  
                           </a>
