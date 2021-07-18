@@ -9,7 +9,7 @@ export default function postByCategory({tags}) {
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">    
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                tags[0].posts.map(post => {
+               tags[0].posts ? 'No Post For This Tag' : tags[0].posts.map(post => {
                     return (
                         <div className="flex items-start border p-2" key={post.id}>
                             <Link href={`/post/${post.slug}`}>

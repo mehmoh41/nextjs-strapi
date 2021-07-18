@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function postByCategory({categories}) {
-    console.log('categories' , categories)
+  
     return (
         <>
             
