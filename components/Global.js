@@ -64,11 +64,11 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                   />
                 </g>
               </svg>
-              <Link href={`category/global`}>
+              <Link href={`/category/global`}>
                 <a className="font-semibold inline-block">Global</a>
               </Link>
             </div>
-            <Link href={`category/global`}>
+            <Link href={`/category/global`}>
               <a>See All</a>
             </Link>
           </div>

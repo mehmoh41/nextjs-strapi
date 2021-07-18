@@ -44,7 +44,7 @@ export default function Top({posts}) {
                       <Image src={t.image.url} width={800} height={400} className="w-full"/>
                     </a>
                     </Link>
-                    <Link href={`category/top`}>
+                    <Link href={`/category/top`}>
                     <a className="hidden absolute z-10 text-xs absolute bottom-0 left-0 bg-indigo-600 px-6 m-2 py-2 text-white hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out sm:flex items-center">
                       <span className="text-lg">|</span>&nbsp;&nbsp;<span>TOP</span>
                     </a>

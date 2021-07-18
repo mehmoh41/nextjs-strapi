@@ -65,11 +65,11 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                   />
                 </g>
               </svg>
-              <Link href={`category/sports`}>
+              <Link href={`/category/sports`}>
                 <a className="text-indigo-500 font-semibold inline-block">Sport News</a>
               </Link>
             </div>
-            <Link href={`category/sports`}>
+            <Link href={`/category/sports`}>
               <a>See All</a>
             </Link>
           </div>

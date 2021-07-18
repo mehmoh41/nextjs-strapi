@@ -67,13 +67,13 @@ export default function Hero({ posts}) {
                   />
                 </g>
               </svg>
-              <Link href={`category/fashion`}>
+              <Link href={`/category/fashion`}>
                 <a className="font-semibold inline-block text-indigo-500">
                   Fashion
                 </a>
               </Link>
             </div>
-            <Link href={`category/fashion`}>
+            <Link href={`/category/fashion`}>
               <a>See All</a>
             </Link>
           </div>
