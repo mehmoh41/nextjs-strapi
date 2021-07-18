@@ -14,7 +14,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 Router.onRouteChangeStart = (url) => {
   if (url !== window.location.pathname) {
-    window.routeTimeout = setTimeout(() => (window.location = url), 2000);
+    window.routeTimeout = setTimeout(() => (window.location = url), 4000);
     NProgress.start();
   }
 };

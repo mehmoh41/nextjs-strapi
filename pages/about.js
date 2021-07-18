@@ -11,7 +11,7 @@ export default function About() {
       <main>
         <Header />
         <Link href="/">
-          <button type="button">{t("back-to-home")}</button>
+          <button type="button">about page</button>
         </Link>
       </main>
       <Footer />

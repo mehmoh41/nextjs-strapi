@@ -78,7 +78,7 @@ export default function Family({posts}) {
             family && family.map((fam) => {
               return (
                 <div className="rounded overflow-hidden shadow-lg flex flex-col" key={fam.id}>
-                <Link href={`/post/${fam.slug}`}>
+                <Link href={`post/${fam.slug}`}>
                 <a>
                   <img
                     className="w-full"

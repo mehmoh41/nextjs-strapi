@@ -1,17 +1,23 @@
 import Link from "next/link";
-
-export default function postByCategory({categories}) {
+import { useRouter } from 'next/router'
+export default function postByCategory({categories , posts}) {
   
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
     return (
         <>
             
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">    
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                categories[0].posts ? categories[0].posts.map(post => {
+              categories.length === 0 ? 'Not found' :
+                posts.map(post => {
                     return (
                         <div className="flex items-start border p-2" key={post.id}>
-                            <Link href={`/post/${post.slug}`}>
+                            <Link href={`post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="w-20 h-20 bg-cover bg-center">
                                     <img src={post.image.url} />
@@ -20,7 +26,7 @@ export default function postByCategory({categories}) {
                             </Link>
                         
                         <div className="text-sm w-2/3">
-                        <Link href={`/post/${post.slug}`}>
+                        <Link href={`post/${post.slug}`}>
                         <a className="text-gray-400 font-medium hover:text-indigo-600 leading-none">
                                 {post.title}  
                           </a>
@@ -32,7 +38,7 @@ export default function postByCategory({categories}) {
                                   
                     );
                 })
-                : "No Post available for this category"
+               
             }
           
         </div>
@@ -64,11 +70,20 @@ export async function getStaticPaths() {
     // If the route is like /posts/1, then params.id is 1
     const { slug } = params;
   
-    const cats = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/categories?slug=${slug}`);
-    const categories = await cats.json();
+    const res = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/categories?slug=${slug}`);
+    const categories = await res.json();
+
+
+    let posts = null
+    let cat_slug = null
+    if(categories.length > 0) {
+       cat_slug = categories[0].slug
+       const cat_posts = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/posts?categories.slug=${cat_slug}`);
+       posts = await cat_posts.json()
+    }
   
     return {
-      props: { categories },
+      props: { categories,posts },
       // Re-generate the post at most once per second
       // if a request comes in
       revalidate: 1,

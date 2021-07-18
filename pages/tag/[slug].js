@@ -1,19 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
-export default function postByCategory({tags}) {
-    
+export default function postByCategory({tags,posts}) {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
     return (
         <>
             
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">    
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-               !tags[0].posts ? 'No Post For This Tag' : tags[0].posts.map(post => {
+              tags.length === 0 ? 'Not Found' :
+               posts.map(post => {
                  
                     return (
                         <div className="flex items-start border p-2" key={post.id}>
-                            <Link href={`/post/${post.slug}`}>
+                            <Link href={`post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="w-20 h-20 bg-cover bg-center">
                                     <img src={post.image.url} />
@@ -22,7 +28,7 @@ export default function postByCategory({tags}) {
                             </Link>
                         
                         <div className="text-sm w-2/3">
-                        <Link href={`/post/${post.slug}`}>
+                        <Link href={`post/${post.slug}`}>
                         <a className="text-gray-400 font-medium hover:text-indigo-600 leading-none">
                                 {post.title}  
                           </a>
@@ -30,8 +36,7 @@ export default function postByCategory({tags}) {
                           
                           <p className="text-gray-500 text-xs">{post.created_at}</p>
                         </div>
-                      </div>
-                                  
+                      </div>            
                     );
                 })
             }
@@ -67,9 +72,17 @@ export async function getStaticPaths() {
   
     const all_tags = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/tags?slug=${slug}`);
     const tags = await all_tags.json();
+    let posts = null
+    let tag_slug = null
+    if(tags.length > 0) {
+      tag_slug = tags[0].slug
+     const tag_posts = await fetch(`${process.env.NEXTJS_PUBLIC_URL}/posts?tags.slug=${tag_slug}`);
+     posts = await tag_posts.json()
+
+    }
   
     return {
-      props: { tags },
+      props: { tags,posts },
       // Re-generate the post at most once per second
       // if a request comes in
       revalidate: 1,

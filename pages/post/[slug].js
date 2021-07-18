@@ -1,9 +1,16 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 export default function Post({post , post_cat}) {
-  
+  const router = useRouter()
+
   let i = 0;
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <>
+      
       <div className="relative">
         <div
           className="bg-cover h-64 text-center overflow-hidden"
@@ -124,7 +131,7 @@ export default function Post({post , post_cat}) {
                 {
                   post[0].tags && post[0].tags.map((tag) => {
                     return (
-                      <Link href={`/tag/${tag.tag_name}`} key={tag.id}>
+                      <Link href={`tag/${tag.tag_name}`} key={tag.id}>
                           <a className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out mr-1">
                               #{tag.tag_name}
                           </a>
