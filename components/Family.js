@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ImageComponentity from './ImageComponentity'
+import Image from 'next/image'
 export default function Family({posts}) {
     const family = posts.blogs
     return (
@@ -81,7 +81,7 @@ export default function Family({posts}) {
                 <div className="rounded overflow-hidden shadow-lg flex flex-col" key={fam.id}>
                 <Link href={`post/${fam.slug}`}>
                 <a>
-                <ImageComponentity src={fam.image.formats.thumbnail.url} alt={fam.image.alternativeText} classes={'w-full'} />
+                <Image src={fam.image.url} alt={fam.image.alternativeText} height={250} width={350}/>
                 </a>
                 </Link>
                 <div className="px-6 py-4 mb-auto">
@@ -112,13 +112,6 @@ export default function Family({posts}) {
                   </p>
                 </div>
                 <div className="flex items-center px-6 pb-4">
-                  <a>
-                    <img
-                      className="w-12 h-12 rounded-full mr-2"
-                      src="https://tailwindcss.com/img/jonathan.jpg"
-                      // alt="Avatar of Author"
-                    />
-                  </a>
                   <div className="text-sm">
                     <a
                       // href="#"

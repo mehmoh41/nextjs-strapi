@@ -18,15 +18,7 @@ export default function Top({posts}) {
                     </Link>
                     
                     <div className="sm:w-4/12 flex items-center sm:px-6 pb-4">
-                      <a 
-                      // href="#"
-                      >
-                        <ImageComponentity
-                          classes={`w-10 h-10 rounded-full mr-2`}
-                          src="https://tailwindcss.com/img/jonathan.jpg"
-                          alt="Avatar of Jonathan Reinink"
-                        />
-                      </a>
+                      
                       <div className="text-xs">
                         <a
                           // href="#"
