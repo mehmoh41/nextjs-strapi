@@ -25,7 +25,6 @@ class MyDocument extends Document {
           <meta name='theme-color' content='#000000' />
 
           <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
-          <link rel='manifest' href='/manifest.json' />
           <link rel='shortcut icon' href='/favicon.ico' />
         </Head>
         <body className='dark:bg-gray-900 dark:text-gray-50'>
