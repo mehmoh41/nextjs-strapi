@@ -22,7 +22,7 @@ export default function postByCategory({tags,posts}) {
                             <Link href={`/post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="bg-cover bg-center">
-                                <Image src={post.image.url} alt={post.image.name} height={80} width={80} />
+                                <Image src={post.image.url} alt={post.title} height={80} width={80} />
                                 </div>
                             </a>
                             </Link>

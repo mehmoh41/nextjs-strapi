@@ -15,11 +15,11 @@ export default function Post({post , post_cat}) {
       
       <div className="relative">
         <div
-          className="bg-cover h-64 text-center overflow-hidden"
+          className="bg-cover h-64 text-center overflow-hidden w-full"
           title="Woman holding a mug"
         >
           {/* image comes here */}
-          <Image src={post[0].image.url} alt={post[0].image.name} height={380} width={600}/>
+          <Image src={post[0].image.url} alt={post[0].title} height={450} width={650}/>
         </div>
         <div className="max-w-screen-lg mx-auto my-10 px-10">
           <h1 className="text-gray-300 font-bold text-3xl mb-2">
