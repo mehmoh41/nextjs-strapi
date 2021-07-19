@@ -34,7 +34,7 @@ export default function Top({posts}) {
                   <div className="relative mx-auto">
                     <Link href={`post/${t.slug}`}>
                     <a>
-                      <Image src={t.image.url} width={800} height={400} className="w-full"/>
+                      <Image src={t.image.url} alt={t.title} width={800} height={400} className="w-full"/>
                     </a>
                     </Link>
                     <Link href={`/category/top`}>

@@ -111,7 +111,7 @@ export default function Hero({ posts}) {
                 return (
                   <div className="flex items-start mb-3 pb-3" key={index}>
                     <Link href={`/post/${post.slug}`}>
-                      <ImageComponentity src={post.image.formats.thumbnail.url} alt={post.image.alternativeText} classes={'w-20 h-20 mr-3'} />
+                      <Image src={post.image.url} alt={post.title} height={80} width={80} />
                     </Link>
                     
                     <div className="text-sm">
