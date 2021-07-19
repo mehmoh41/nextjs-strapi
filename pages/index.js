@@ -28,7 +28,7 @@ export default function Home({ container }) {
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@componentity' />
         <meta name='twitter:creator' content='@componentity' />
-        <meta property='og:url' content='http://theme-blog.vercel.app/' />
+        <meta property='og:url' content='https://nextjs-strapi-three.vercel.app/' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_US' />
         <meta property='og:site_name' content='Componentity' />
