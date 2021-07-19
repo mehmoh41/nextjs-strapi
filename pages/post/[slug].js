@@ -19,7 +19,7 @@ export default function Post({post , post_cat}) {
           title="Woman holding a mug"
         >
           {/* image comes here */}
-          <Image src={post[0].image} alt={post[0].image.name} height={380} width={600}/>
+          <Image src={post[0].image.url} alt={post[0].image.name} height={380} width={600}/>
         </div>
         <div className="max-w-screen-lg mx-auto my-10 px-10">
           <h1 className="text-gray-300 font-bold text-3xl mb-2">
