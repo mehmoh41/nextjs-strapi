@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ImageComponentity from './ImageComponentity'
 export default function Top({posts}) {
     const top = posts.blogs
 
@@ -20,8 +21,8 @@ export default function Top({posts}) {
                       <a 
                       // href="#"
                       >
-                        <img
-                          className="w-10 h-10 rounded-full mr-2"
+                        <ImageComponentity
+                          classes={`w-10 h-10 rounded-full mr-2`}
                           src="https://tailwindcss.com/img/jonathan.jpg"
                           alt="Avatar of Jonathan Reinink"
                         />

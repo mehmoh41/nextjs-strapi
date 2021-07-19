@@ -81,7 +81,7 @@ export default function Hero({ posts}) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         
               <div className="relative w-full flex items-end justify-start text-left bg-cover bg-center" key={first.id}>
-                <img src={first.image.url}/>
+                <ImageComponentity src={first.image.url} alt={first.title}/>
               <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
               <div className="absolute top-0 right-0 left-0 mx-5 mt-2 flex justify-between items-center">
                 <Link href={`/post/${first.slug}`}>

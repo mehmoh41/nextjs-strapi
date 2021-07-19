@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ImageComponentity from './ImageComponentity'
 export default function Technology({posts}) {
     const techs = posts.blogs
     return (
@@ -79,8 +80,8 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                 <div key={tech.id} className="flex flex-row justify-content-center">
                   <Link href={`/post/${tech.slug}`}>
                   <a>
-                    <div className="h-56 lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
-                      <img src={tech.image.url}/>
+                    <div className="flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                    <ImageComponentity src={tech.image.formats.thumbnail.url} alt={tech.image.alternativeText} classes={'h-56 lg:w-48  mr-3'} />
                     </div>
                   </a>
                   </Link>

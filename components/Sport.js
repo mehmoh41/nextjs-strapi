@@ -1,5 +1,5 @@
 import Link from 'next/link'
-
+import ImageComponentity from './ImageComponentity';
 export default function Sport({posts}) {
     const sports = posts.blogs
   return (
@@ -97,11 +97,8 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                       </div>
                       <Link href={`/post/${sport.slug}`}>
                         <a className="inline-block ml-2">
-                          <div className="w-20 h-20 bg-cover bg-center">
-                            <img
-                              src={sport.image.url}
-                              alt={sport.title}
-                            />
+                          <div className={`bg-cover bg-center`}>
+                          <ImageComponentity src={sport.image.formats.thumbnail.url} alt={sport.image.alternativeText} classes={'w-20 h-20 mr-3'} />
                           </div>
                         </a>
                       </Link>
