@@ -81,7 +81,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                   <Link href={`/post/${tech.slug}`}>
                   <a>
                     <div className="flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
-                    <Image src={tech.image.url} alt={tech.title}  height={192} width={192} />
+                    <Image src={tech.image.url} alt={tech.slug}  height={192} width={192} />
                     </div>
                   </a>
                   </Link>

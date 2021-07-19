@@ -111,7 +111,7 @@ export default function Hero({ posts}) {
                 return (
                   <div className="flex items-start mb-3 pb-3" key={index}>
                     <Link href={`/post/${post.slug}`}>
-                      <Image src={post.image.url} alt={post.title} height={80} width={80} />
+                      <Image src={post.image.url} alt={post.slug} width={80} height={80}  />
                     </Link>
                     
                     <div className="text-sm">
