@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ImageComponentity from "../../components/ImageComponentity";
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 export default function postByCategory({categories , posts}) {
   
@@ -21,7 +21,7 @@ export default function postByCategory({categories , posts}) {
                             <Link href={`/post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="bg-cover bg-center">
-                                <ImageComponentity src={post.image.formats.thumbnail.url} alt={post.image.alternativeText} classes={'w-20 h-20 mr-3'} />
+                                <Image src={post.image.url} alt={post.image.name} height={80} width={80} />
                                 </div>
                             </a>
                             </Link>

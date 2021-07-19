@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import ImageComponentity from '../../components/ImageComponentity';
+import Image from 'next/image'
 
 
 export default function Post({post , post_cat}) {
@@ -19,7 +19,7 @@ export default function Post({post , post_cat}) {
           title="Woman holding a mug"
         >
           {/* image comes here */}
-          <ImageComponentity src={post[0].image.formats.thumbnail.url} alt={post[0].image.alternativeText} classes={'w-20 h-20 mr-3'} />
+          <Image src={post[0].image} alt={post[0].image.name} height={380} width={600}/>
         </div>
         <div className="max-w-screen-lg mx-auto my-10 px-10">
           <h1 className="text-gray-300 font-bold text-3xl mb-2">
