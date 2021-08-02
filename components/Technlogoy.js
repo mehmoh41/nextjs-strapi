@@ -5,10 +5,11 @@ export default function Technology({posts}) {
     return (
         <>
           <div className="md:w-1/12 inline-block"></div>
-          <div className="w-6/12 md:w-6/12 inline-block mx-auto p-12 sm:p-10 md:p-16 relative">
+          <div className="w-6/12 md:w-6/12 inline-block mx-auto p-4 sm:p-10 md:p-16 relative">
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
               <svg
+                fill="#3949AB"
                 className="h-6 mr-3"
                 version="1.1"
                 id="Capa_1"
@@ -94,11 +95,11 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                       </a>
                     </Link>
                     <Link href={`/post/${tech.slug}`}>
-                      <a className=" lg:font-semibold text-md lg:text-xl mb-2 hover:text-indigo-600 transition duration-500 ease-in-out">
+                      <a className="font-semibold text-md lg:text-xl mb-2 hover:text-indigo-600 transition duration-500 ease-in-out">
                         {tech.title}
                       </a>
                     </Link>
-                    <p className=" hidden md:block text-sm mt-2">
+                    <p className=" hidden md:block text-sm mt-2 ">
                       {tech.excerpt}
                     </p>
                   </div>

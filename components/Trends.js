@@ -9,6 +9,7 @@ export default function Trend({posts}) {
       <div className="border-b-2 border-indigo-500  mb-5 flex justify-between text-sm">
           <div className="text-indigo-600 flex items-center pb-2 pr-2  uppercase">
             <svg
+              fill="#3949AB"
               className="h-6 mr-3"
               version="1.1"
               id="Capa_1"

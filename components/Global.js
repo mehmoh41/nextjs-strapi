@@ -5,10 +5,11 @@ export default function Global({posts}) {
     let i = 0
     return (
         <>
-          <div className="w-6/12 md:w-4/12 inline-block mx-auto p-12 sm:p-10 md:p-16 absolute">
+          <div className="w-6/12 md:w-4/12 inline-block mx-auto p-4 sm:p-10 md:p-16 absolute">
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
               <svg
+                fill="#3949AB"
                 className="h-6 mr-3"
                 version="1.1"
                 id="Capa_1"
@@ -83,7 +84,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                 </span>
                 <div className="text-md border-b pb-4">
                   <Link href={`post/${global.slug}`}>
-                  <a className="text-md lg:text-lg hover:text-indigo-600 md:font-semibold">
+                  <a className="text-md lg:text-lg hover:text-indigo-600 font-semibold">
                     {global.title}
                   </a>
                   </Link>

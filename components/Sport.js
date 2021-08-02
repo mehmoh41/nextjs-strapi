@@ -11,6 +11,7 @@ export default function Sport({posts}) {
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className="flex items-center pb-2 pr-2 border-b-2 uppercase">
               <svg
+                fill="#3949AB"
                 className="h-6 mr-3"
                 version="1.1"
                 id="Capa_1"
@@ -91,8 +92,8 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
 
                     <div className="flex items-start justify-between mt-3">
                       <div className="text-sm w-2/3">
-                        <p className="">{sport.excerpt}</p>
-                        <p className="text-xs my-3 dark:text-gray-200">
+                        <p className="text-gray-500">{sport.excerpt}</p>
+                        <p className="text-xs my-3 text-gray-500">
                         {dateFormat(sport.created_at , "dd - mmmm - yyyy")}
                         </p>
                       </div>
