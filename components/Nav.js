@@ -44,10 +44,10 @@ function Nav({ router }) {
 
             <div className='fixed inset-y-0 left-0 pr-20 max-w-full flex'>
               <div className='relative w-screen max-w-md'>
-                <div className='h-full flex flex-col py-6 bg-white dark:bg-gray-700 shadow-xl overflow-y-scroll'>
+                <div className='h-full flex flex-col py-6  dark:bg-gray-700 shadow-xl overflow-y-scroll'>
                   <div className='px-4 sm:px-6'>
                     <h2
-                      className='pl-4 text-lg font-medium text-gray-900 dark:text-white'
+                      className='pl-4 text-lg font-medium  dark:text-white'
                       id='slide-over-title'
                     >
                       Panel title
