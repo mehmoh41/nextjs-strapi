@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 export default function postByCategory({tags,posts}) {
   const router = useRouter()
+  
 
   if (router.isFallback) {
     return <div>Loading...</div>
@@ -22,19 +23,24 @@ export default function postByCategory({tags,posts}) {
                             <Link href={`/post/${post.slug}`}>
                             <a className="inline-block mr-2">
                                 <div className="bg-cover bg-center">
-                                <Image src={post.image.url} alt={post.title} height={80} width={80} />
+                            {
+                              post.image.url && 
+                              <Image src={post.image.formats.thumbnail.url} alt={post.title} height={80} width={80} />
+                            }
+                                
+
                                 </div>
                             </a>
                             </Link>
                         
                         <div className="text-sm w-2/3">
                         <Link href={`/post/${post.slug}`}>
-                        <a className="text-gray-400 font-medium hover:text-indigo-600 leading-none">
+                        <a className="font-medium hover:text-indigo-600 leading-none">
                                 {post.title}  
                           </a>
                         </Link>
                           
-                          <p className="text-gray-500 text-xs">{post.created_at}</p>
+                          <p className=" text-xs">{post.created_at}</p>
                         </div>
                       </div>            
                     );

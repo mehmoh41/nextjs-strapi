@@ -39,7 +39,10 @@ export default function Post({post , post_cat}) {
           title="Woman holding a mug"
         >
           {/* image comes here */}
-          <Image src={post[0].image.url} alt={post[0].title} height={450} width={650}/>
+          {
+            post[0].image.url && <Image src={post[0].image.url} alt={post[0].title} height={450} width={650}/>
+          }
+          
         </div>
         <div className="max-w-screen-lg mx-auto my-10 px-10">
           <h1 className="text-gray-300 font-bold text-3xl mb-2">
@@ -241,11 +244,11 @@ export default function Post({post , post_cat}) {
               //   <Link href={`${post.slug}`}>{post.name}</Link>
               // </div>
               <div className="my-4 flex" key={post.id}>
-              <span className="text-gray-600 font-bold text-3xl mr-4">{++i}.</span>
+              <span className=" font-bold text-3xl mr-4">{++i}.</span>
               <div className="text-md border-b pb-4">
               <Link href={`/post/${post.slug}`}>
                 
-                <a className="text-gray-400 hover:text-indigo-300 font-semibold">
+                <a className=" hover:text-indigo-300 font-semibold">
                 {post.title}  
                 </a>
               </Link>
