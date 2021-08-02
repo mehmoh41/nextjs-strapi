@@ -78,7 +78,7 @@ export default function Trend({posts}) {
               
                 <li className="inline-block mx-1" key={tag.id}>
                 <Link href={`/tag/${tag.slug}`}>
-                  <a className="rounded flex items-center justify-center py-3 px-5 text-xs bg-indigo-600 text-white hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out text-center">
+                  <a className="rounded text-white my-2 flex items-center justify-center py-3 px-5 text-xs bg-indigo-600  hover:text-indigo-600 transition duration-500 ease-in-out text-center">
                     #{tag.tag_name}
                   </a>
                 </Link>

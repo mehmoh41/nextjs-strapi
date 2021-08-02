@@ -14,6 +14,7 @@ export default function Hero({ posts}) {
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className=" flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
               <svg
+                
                 className="h-6 mr-3"
                 version="1.1"
                 id="Capa_1"
@@ -82,23 +83,23 @@ export default function Hero({ posts}) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         
               <div className="relative w-full flex items-end justify-start text-left bg-cover bg-center" key={first.id}>
-                <Image src={first.image.url} alt={first.title} width={600} height={350}/>
+                <Image src={first.image.url} alt={first.title} layout="fill" objectFit="cover" />
               <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
               <div className="absolute top-0 right-0 left-0 mx-5 mt-2 flex justify-between items-center">
                 <Link href={`/post/${first.slug}`}>
-                <a className="text-xs bg-indigo-600  px-5 py-2 uppercase hover:text-indigo-600 transition ease-in-out duration-500">
+                <a className="text-sm text-white hidden md:block bg-indigo-600  px-2 py-2 capitalize hover:text-indigo-600 transition ease-in-out duration-500">
                   Featured
                 </a>
                 </Link>
               
                 <div className="font-regular flex flex-col justify-start">
-                  <span className="text-3xl leading-0 font-semibold inline-block text-center">25</span>
-                  <span className="mt-1">{first.created_at}</span>
+                  <span className="text-md lg:text-2xl leading-0 font-semibold inline-block text-center hidden md:block">25</span>
+                  <span className="mt-1 hidden md:block">{first.created_at}</span>
                 </div>
               </div>
               <main className="p-5 z-10 absolute">
                 <Link href={`/post/${first.slug}`}>
-                <a className="text-white text-md tracking-tight font-semibold leading-12 font-regular hover:underline text-2xl">
+                <a className="text-white text-md tracking-tight font-semibold leading-12 font-regular hover:underline text-sm lg:text-2xl">
                   {first.title}
                 </a>
                 </Link>
@@ -107,24 +108,29 @@ export default function Hero({ posts}) {
 
           <div>
           <div className="lg:border-l lg:pl-4">
+          <div className="grid grid-rows-1">
+                    
               {rest.map((post, index) => {
                 return (
                   <div className="flex items-start mb-3 pb-3" key={index}>
-                    <Link href={`/post/${post.slug}`}>
-                      <Image src={post.image.url} alt={post.title} width={80} height={80}  />
+                    <div className="inline-block mr-8">
+                    <Link href={`/post/${post.slug}`} className="h-20 w-20">
+                      <Image src={post.image.url} alt={post.title}  height={90} width={90}/>
                     </Link>
-                    
-                    <div className="text-sm">
+                    </div>
+                    <div className="">
                       <p className="text-xs">{post.created_at}</p>
                       <Link href={`/post/${post.slug}`}>
-                      <a className="text-gray-400 font-medium hover:text-gray-200 leading-none">
+                      <a className="font-medium leading-none">
                         {post.title}
                       </a>
                       </Link>
                     </div>
-                  </div>
+              </div>
                 );
               })}
+              
+                  </div>
             </div>
           </div>
           </div>

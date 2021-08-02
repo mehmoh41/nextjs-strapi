@@ -83,15 +83,15 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                     key={index}
                   >
                     <Link href={`/post/${sport.slug}`}>
-                      <a className="text-gray-200 font-medium hover:text-gray-100">
+                      <a className="font-medium">
                         {sport.title}
                       </a>
                     </Link>
 
                     <div className="flex items-start justify-between mt-3">
                       <div className="text-sm w-2/3">
-                        <p className="text-gray-300">{sport.excerpt}</p>
-                        <p className="text-gray-600 text-xs">
+                        <p className="">{sport.excerpt}</p>
+                        <p className="text-xs">
                           {sport.created_at}
                         </p>
                       </div>

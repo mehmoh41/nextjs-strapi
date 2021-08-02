@@ -10,13 +10,13 @@ import Link from 'next/link'
       </footer> */}
 
 <div className="pt-5 mt-12">
-   <div className="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+   <div className="max-w-screen-lg px-4 sm:px-6  sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
      
    </div>
 </div>
 
 <div className=" pt-2">
-   <div className="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+   <div className="flex pb-5 px-3 m-auto pt-5 border-t text-sm flex-col
       max-w-screen-lg items-center">
          <div className="p-5 text-center">
        <Link href={'/'}>
@@ -28,7 +28,7 @@ import Link from 'next/link'
       <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
       
          <a href="/#" className="w-6 mx-1">
-            <svg className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
+            <svg className="fill-current cursor-pointer  hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
                <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
                   5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
                   -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
@@ -46,7 +46,7 @@ import Link from 'next/link'
             </svg>
          </a>
          <a href="/#" className="w-6 mx-1">
-            <svg className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
+            <svg className="fill-current cursor-pointer hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
                <path id="Facebook" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
                   5.373,-12 12,-12c6.627,0 12,5.373
                   12,12Zm-11.278,0l1.294,0l0.172,-1.617l-1.466,0l0.002,-0.808c0,-0.422
@@ -55,7 +55,7 @@ import Link from 'next/link'
             </svg>
          </a>
          <a href="/#" className="w-6 mx-1">
-            <svg className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
+            <svg className="fill-current cursor-pointer hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
                <g id="Layer_1">
                   <circle id="Oval" cx="12" cy="12" r="12"></circle>
                   <path id="Shape" d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
@@ -76,7 +76,7 @@ import Link from 'next/link'
             </svg>
          </a>
          <a href="/#" className="w-6 mx-1">
-            <svg className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
+            <svg className="fill-current cursor-pointer  hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
                <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
                   3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
                   -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
@@ -94,7 +94,7 @@ import Link from 'next/link'
             </svg>
          </a>
          <a href="/#" className="w-6 mx-1">
-            <svg className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
+            <svg className="fill-current cursor-pointer  hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"   >
                <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
                   -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
                   -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323

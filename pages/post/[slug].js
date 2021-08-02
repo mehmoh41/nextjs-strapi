@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
+
 
 
 export default function Post({post , post_cat}) {
@@ -10,6 +12,24 @@ export default function Post({post , post_cat}) {
   if (router.isFallback) {
     return <div>Loading...</div>
   }
+
+
+  const MyImage = props => {
+    return (
+      <img
+        alt={props.alt}
+        src={props.src}
+        onClick={handleClick}
+      />
+    );
+  };
+
+  const renderers = {
+    image: MyImage
+  };
+
+
+
   return (
     <>
       
@@ -127,8 +147,8 @@ export default function Post({post , post_cat}) {
 
         <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 relative px-10">
           <div className="lg:col-span-8">
-            <div className="content">
-              {post[0].content}
+            <div className="content" >
+            <ReactMarkdown children={post[0].content} components={renderers} />
               <div className="tags">
                 {
                   post[0].tags && post[0].tags.map((tag) => {
@@ -290,6 +310,6 @@ export async function getStaticProps({ params }) {
     props: { post, categories, post_cat },
     // Re-generate the post at most once per second
     // if a request comes in
-    revalidate: 1,
+    // revalidate: 1,
   };
 }

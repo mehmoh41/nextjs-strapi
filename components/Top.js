@@ -22,11 +22,11 @@ export default function Top({posts}) {
                       <div className="text-xs">
                         <a
                           // href="#"
-                          className="text-gray-900 font-medium leading-none hover:text-indigo-600"
+                          className=" font-medium leading-none hover:text-indigo-600"
                         >
                             Ali Mohammadi
                           </a>
-                        <p className="text-gray-600 text-xs">{t.created_at}</p>
+                        <p className=" text-xs">{t.created_at}</p>
                       </div>
                     </div>
                   </div>
@@ -38,13 +38,13 @@ export default function Top({posts}) {
                     </a>
                     </Link>
                     <Link href={`/category/top`}>
-                    <a className="hidden absolute z-10 text-xs absolute bottom-0 left-0 bg-indigo-600 px-6 m-2 py-2 text-white hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out sm:flex items-center">
+                    <a className="hidden absolute z-10 text-xs absolute bottom-0 left-0 bg-indigo-600 px-6 m-2 py-2   hover:text-indigo-600 transition duration-500 ease-in-out sm:flex items-center">
                       <span className="text-lg">|</span>&nbsp;&nbsp;<span>TOP</span>
                     </a>
                     </Link>
                   </div>
                   <span
-                    className="p-5 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center"
+                    className="p-5 text-xs font-regular mr-1 flex flex-row items-center"
                   >
                     <svg
                       height="13px"

@@ -94,11 +94,11 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                       </a>
                     </Link>
                     <Link href={`/post/${tech.slug}`}>
-                      <a className="text-gray-200 font-bold text-xl mb-2 hover:text-indigo-100 transition duration-500 ease-in-out">
+                      <a className=" font-bold text-xl mb-2 hover:text-indigo-100 transition duration-500 ease-in-out">
                         {tech.title}
                       </a>
                     </Link>
-                    <p className="text-gray-700 text-sm mt-2">
+                    <p className=" text-sm mt-2">
                       {tech.excerpt}
                     </p>
                   </div>
