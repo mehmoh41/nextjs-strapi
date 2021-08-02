@@ -45,10 +45,10 @@ export default function Post({post , post_cat}) {
           
         </div>
         <div className="max-w-screen-lg mx-auto my-10 px-10">
-          <h1 className="text-gray-300 font-bold text-3xl mb-2">
+          <h1 className=" font-bold text-3xl mb-2">
             {post[0].title}
           </h1>
-          <div className="text-gray-700 text-xs flex my-6 flex justify-between">
+          <div className=" text-xs flex my-6 flex justify-between">
             <div className="flex items-center">
               {/* author image */}
                 {/* <img
@@ -60,17 +60,17 @@ export default function Post({post , post_cat}) {
               <div className="text-sm">
                 <a
                   href="#"
-                  className="text-gray-900 font-medium leading-none hover:text-indigo-600 transition duration-500 ease-in-out"
+                  className=" font-medium leading-none hover:text-indigo-600 transition duration-500 ease-in-out"
                 >
                   ali mohammadi
                 </a>
-                <p className="text-gray-400 text-xs">{post[0].created_at}</p>
+                <p className=" text-xs">{post[0].created_at}</p>
               </div>
             </div>
             <div className="flex-row flex">
               <a href="/#" className="w-6 mx-1">
                 <svg
-                  className="fill-current cursor-pointer hover:text-gray-500 text-indigo-600"
+                  className="fill-current cursor-pointer  text-indigo-600"
                   width="100%"
                   height="100%"
                   viewBox="0 0 24 24"
@@ -98,7 +98,7 @@ export default function Post({post , post_cat}) {
               </a>
               <a href="/#" className="w-6 mx-1">
                 <svg
-                  className="fill-current cursor-pointer hover:text-gray-500 text-indigo-600"
+                  className="fill-current cursor-pointer  text-indigo-600"
                   width="100%"
                   height="100%"
                   viewBox="0 0 24 24"
@@ -117,7 +117,7 @@ export default function Post({post , post_cat}) {
               </a>
               <a href="/#" className="w-6 mx-1">
                 <svg
-                  className="fill-current cursor-pointer hover:text-gray-500 text-indigo-600"
+                  className="fill-current cursor-pointer text-indigo-600"
                   width="100%"
                   height="100%"
                   viewBox="0 0 24 24"
@@ -157,7 +157,7 @@ export default function Post({post , post_cat}) {
                   post[0].tags && post[0].tags.map((tag) => {
                     return (
                       <Link href={`/tag/${tag.tag_name}`} key={tag.id}>
-                          <a className="text-xs text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out mr-1">
+                          <a className="text-xs text-indigo-600 font-medium transition duration-500 ease-in-out mr-1">
                               #{tag.tag_name}
                           </a>
                       </Link>
