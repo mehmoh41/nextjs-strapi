@@ -12,7 +12,7 @@ export default function postByCategory({tags,posts}) {
     return (
         <>
         <Head>
-        <title>{posts[0].title}</title>
+        <title>Tag--</title>
       </Head>
             
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">    

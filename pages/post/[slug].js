@@ -33,7 +33,7 @@ export default function Post({post , post_cat}) {
   return (
     <>
       <Head>
-        <title>{post[0].title}</title>
+        <title>Post--</title>
       </Head>
       <div className="relative">
         <div
