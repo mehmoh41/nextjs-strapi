@@ -4,15 +4,35 @@ import Family from "../components/Family";
 import Trend from "../components/Trends";
 import Parent from "../components/Parent";
 import Head from 'next/head'
-import Seo from "../components/seo";
 import Top from "../components/Top";
 
 export default function Home({ container }) {
 
   return (
     <>
-    {/* <Seo seo={homepage.seo} /> */}
+    <Head>
+        <title>Strapi-NextJs Theme</title>
+        <meta name='description' content='Componentity Team has made a Strapi-NEXTJS theme' />
+        <meta httpEquiv='Content-Type' content='text/html;charset=UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=7' />
+        <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
+        <meta name='robots' content='index,follow' />
+        <meta name='googlebot' content='index,follow' />
 
+        <meta property='og:title' content='Componentity NextJs Strapi Theme' />
+        <meta property='og:description' content='Componentity Team has made a WP-NEXTJS theme' />
+        <meta property='og:image' content='/seoindex.png' />
+        <meta name='twitter:image' content='/seoindex.png' />
+        <meta name='twitter:image:alt' content='Componentity.com' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@componentity' />
+        <meta name='twitter:creator' content='@componentity' />
+        <meta property='og:url' content='https://nextjs-strapi-three.vercel.app/' />
+        <meta property='og:type' content='website' />
+        <meta property='og:locale' content='en_US' />
+        <meta property='og:site_name' content='Componentity' />
+      </Head>
     {container.map((item,index)=>{
 
       // item.item.component == "SPO"

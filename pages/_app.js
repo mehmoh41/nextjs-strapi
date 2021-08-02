@@ -5,7 +5,7 @@ import "nprogress/nprogress.css"; //styles of nprogress
 import Router from "next/router";
 import "@fontsource/poppins"
 import { ThemeProvider } from "next-themes";
-import { createContext } from "react";
+// import { createContext } from "react";
 
 import 'nprogress/nprogress.css' //styles of nprogress
 import Head from 'next/head'
@@ -37,12 +37,12 @@ function MyApp({ Component, pageProps }) {
 
     </Head>
       <ThemeProvider attribute="class">
-      <GlobalContext.Provider value={global}>
+      {/* <GlobalContext.Provider value={global}> */}
 
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        </GlobalContext.Provider>
+        {/* </GlobalContext.Provider> */}
 
       </ThemeProvider>
     </>
