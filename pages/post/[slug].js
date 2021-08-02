@@ -32,7 +32,9 @@ export default function Post({post , post_cat}) {
 
   return (
     <>
-      
+      <Head>
+        <title>{post[0].title}</title>
+      </Head>
       <div className="relative">
         <div
           className="bg-cover h-64 text-center overflow-hidden w-full"

@@ -17,7 +17,6 @@ export default function Home({ container }) {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta httpEquiv='X-UA-Compatible' content='IE=7' />
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
-        <meta name='robots' content='index,follow' />
         <meta name='googlebot' content='index,follow' />
 
         <meta property='og:title' content='Componentity NextJs Strapi Theme' />
