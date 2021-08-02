@@ -93,7 +93,7 @@ export default function Hero({ posts}) {
                 </Link>
               
                 <div className="font-regular flex flex-col justify-start">
-                  <span className="text-md lg:text-2xl leading-0 font-semibold inline-block text-center hidden md:block">25</span>
+                  <span className="text-md lg:text-2xl leading-0 font-semibold text-center hidden md:block">25</span>
                   <span className="mt-1 hidden md:block">{first.created_at}</span>
                 </div>
               </div>
