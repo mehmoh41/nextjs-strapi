@@ -11,7 +11,7 @@ import 'nprogress/nprogress.css' //styles of nprogress
 import Head from 'next/head'
 
 
-export const GlobalContext = createContext({});
+
 
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
