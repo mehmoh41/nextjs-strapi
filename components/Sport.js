@@ -84,7 +84,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                     key={index}
                   >
                     <Link href={`/post/${sport.slug}`}>
-                      <a className="font-medium">
+                      <a className="font-semibold hover:text-indigo-600">
                         {sport.title}
                       </a>
                     </Link>

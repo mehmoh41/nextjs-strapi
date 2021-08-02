@@ -83,7 +83,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                 </span>
                 <div className="text-md border-b pb-4">
                   <Link href={`post/${global.slug}`}>
-                  <a className=" hover:text-indigo-400 font-semibold">
+                  <a className="text-md lg:text-lg hover:text-indigo-600 md:font-semibold">
                     {global.title}
                   </a>
                   </Link>

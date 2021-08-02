@@ -65,7 +65,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                 </g>
               </svg>
               <Link href={`/category/technlogy`}>
-                <a className="font-semibold inline-block">Technology</a>
+                <a className="text-sm md:text-md font-semibold inline-block">Technology</a>
               </Link>
             </div>
             <Link href={`/category/technlogy`}>
@@ -80,7 +80,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                 <div key={tech.id} className="flex flex-row justify-content-center mt-2">
                   <Link href={`/post/${tech.slug}`}>
                   <a>
-                    <div className="hidden md:block items-center bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                    <div className="hidden md:block my-12 items-center bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                     <Image src={tech.image.url} alt={tech.title}  height={192} width={192} />
                     </div>
                   </a>
@@ -89,12 +89,12 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                 <div className="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                   <div className="">
                     <Link href={`category/technlogy`}>
-                      <a className="text-sm text-indigo-600 uppercase font-medium mb-3 flex items-center hover:text-gray-900 transition duration-500 ease-in-out">
+                      <a className="md:text-sm text-indigo-600 uppercase font-medium mb-3 flex items-center hover:text-gray-900 transition duration-500 ease-in-out">
                         Technology
                       </a>
                     </Link>
                     <Link href={`/post/${tech.slug}`}>
-                      <a className=" font-bold text-xl mb-2 hover:text-indigo-100 transition duration-500 ease-in-out">
+                      <a className=" lg:font-semibold text-md lg:text-xl mb-2 hover:text-indigo-600 transition duration-500 ease-in-out">
                         {tech.title}
                       </a>
                     </Link>
