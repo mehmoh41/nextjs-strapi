@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import dateFormat from "dateformat";
 import Image from 'next/image'
 export default function Sport({posts}) {
     const sports = posts.blogs
@@ -91,8 +92,8 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                     <div className="flex items-start justify-between mt-3">
                       <div className="text-sm w-2/3">
                         <p className="">{sport.excerpt}</p>
-                        <p className="text-xs">
-                          {sport.created_at}
+                        <p className="text-xs my-3 dark:text-gray-200">
+                        {dateFormat(sport.created_at , "dd - mmmm - yyyy")}
                         </p>
                       </div>
                       <Link href={`/post/${sport.slug}`}>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import dateFormat from "dateformat";
 import Head from 'next/head'
 
 export default function postByCategory({tags,posts}) {
@@ -44,7 +45,7 @@ export default function postByCategory({tags,posts}) {
                           </a>
                         </Link>
                           
-                          <p className=" text-xs">{post.created_at}</p>
+                          <p className=" text-xs">{dateFormat(post.created_at , "dd - mmmm - yyyy")}</p>
                         </div>
                       </div>            
                     );

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import dateFormat from "dateformat";
 export default function Family({posts}) {
     const family = posts.blogs
     return (
@@ -111,15 +112,15 @@ export default function Family({posts}) {
                     {fam.excerpt}
                   </p>
                 </div>
-                <div className="flex items-center px-6 pb-4">
-                  <div className="text-sm">
+                <div className=" px-6 pb-4">
+                  <div className="text-sm flex justify-between items-center">
                     <a
                       // href="#"
                       className="text-gray-900 font-medium leading-none hover:text-indigo-600"
                     >
                       Ali Mohammadi
                     </a>
-                    <p className="text-gray-600">{fam.created_at}</p>
+                    <p className="text-gray-600">{dateFormat(fam.created_at , "dd - mmmm - yyyy")}</p>
                   </div>
                 </div>
               </div>

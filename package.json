@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.0",
+    "dateformat": "^4.5.1",
     "next": "^10.0.0 || ^10.2.3",
     "next-i18next": "^8.4.0",
     "next-themes": "^0.0.15",

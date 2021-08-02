@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Head from 'next/head'
+import dateFormat from "dateformat";
 import ReactMarkdown from 'react-markdown'
 
 
@@ -67,7 +68,7 @@ export default function Post({post , post_cat}) {
                 >
                   ali mohammadi
                 </a>
-                <p className=" text-xs">{post[0].created_at}</p>
+                <p className=" text-xs">{dateFormat(post[0].created_at , "dd - mmmm - yyyy")}</p>
               </div>
             </div>
             <div className="flex-row flex">

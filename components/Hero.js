@@ -1,5 +1,6 @@
 import Link from "next/link"
-import ImageComponentity from "./ImageComponentity";
+import dateFormat from "dateformat";
+
 import Image from 'next/image'
 export default function Hero({ posts}) {
   
@@ -93,13 +94,12 @@ export default function Hero({ posts}) {
                 </Link>
               
                 <div className="font-regular flex flex-col justify-start">
-                  <span className="text-md lg:text-2xl leading-0 font-semibold text-center hidden md:block">25</span>
-                  <span className="mt-1 hidden md:block">{first.created_at}</span>
+                  <span className="mt-1 hidden md:block">{dateFormat(first.created_at , "dd - mmmm - yyyy")}</span>
                 </div>
               </div>
               <main className="p-5 z-10 absolute">
                 <Link href={`/post/${first.slug}`}>
-                <a className="hidden md:block  text-md tracking-tight font-semibold leading-12 font-regular hover:underline text-sm lg:text-2xl">
+                <a className="hidden md:block  text-white tracking-wide font-medium leading-12 font-regular hover:underline text-sm lg:text-2xl">
                   {first.title}
                 </a>
                 </Link>
@@ -119,7 +119,7 @@ export default function Hero({ posts}) {
                     </Link>
                     </div>
                     <div className="">
-                      <p className="text-xs">{post.created_at}</p>
+                      <p className="text-xs">{dateFormat(first.created_at , "dd - mmmm - yyyy")}</p>
                       <Link href={`/post/${post.slug}`}>
                       <a className="font-medium leading-none">
                         {post.title}
