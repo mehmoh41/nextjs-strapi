@@ -5,8 +5,13 @@ import "nprogress/nprogress.css"; //styles of nprogress
 import Router from "next/router";
 import "@fontsource/poppins"
 import { ThemeProvider } from "next-themes";
-import 'nprogress/nprogress.css' //styles of nprogress
+import { createContext } from "react";
 
+import 'nprogress/nprogress.css' //styles of nprogress
+import Head from 'next/head'
+
+
+export const GlobalContext = createContext({});
 
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -27,10 +32,18 @@ Router.onRouteChangeComplete = () => {
 function MyApp({ Component, pageProps }) {
   return (
     <>
+    <Head>
+    
+
+    </Head>
       <ThemeProvider attribute="class">
+      <GlobalContext.Provider value={global}>
+
         <Layout>
           <Component {...pageProps} />
         </Layout>
+        </GlobalContext.Provider>
+
       </ThemeProvider>
     </>
   );
