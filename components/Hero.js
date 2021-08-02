@@ -14,7 +14,7 @@ export default function Hero({ posts}) {
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className=" flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
               <svg
-                
+
                 className="h-6 mr-3"
                 version="1.1"
                 id="Capa_1"
@@ -113,7 +113,7 @@ export default function Hero({ posts}) {
               {rest.map((post, index) => {
                 return (
                   <div className="flex items-start mb-3 pb-3" key={index}>
-                    <div className="inline-block mr-8">
+                    <div className="inline-block mr-4 md:mr-8 ">
                     <Link href={`/post/${post.slug}`} className="h-20 w-20">
                       <Image src={post.image.url} alt={post.title}  height={90} width={90}/>
                     </Link>
