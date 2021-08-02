@@ -5,7 +5,7 @@ export default function Global({posts}) {
     let i = 0
     return (
         <>
-          <div className="w-4/12 inline-block mx-auto p-12 sm:p-10 md:p-16 absolute">
+          <div className="w-6/12 md:w-4/12 inline-block mx-auto p-12 sm:p-10 md:p-16 absolute">
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
               <svg
@@ -77,7 +77,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
           {
             globals.blogs && globals.blogs.map((global) => {
               return (
-                <div className="flex flex-row justify-items-center " key={global.id}>
+                <div className="flex flex-row justify-items-center mt-8 " key={global.id}>
                 <span className="text-indigo-600 font-bold text-3xl mr-4">
                   {++i}
                 </span>
@@ -87,9 +87,6 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                     {global.title}
                   </a>
                   </Link>
-                  <p className="text-sm">
-                    {global.excerpt}
-                  </p>
                 </div>
               </div>
             

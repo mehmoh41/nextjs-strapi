@@ -5,7 +5,7 @@ export default function Family({posts}) {
     return (
         <>
             
-      <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+      <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 my-20 md:my-1">
         <div className="border-b mb-5 flex justify-between text-sm">
           <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
             <svg
@@ -74,39 +74,39 @@ export default function Family({posts}) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto">
           {
             family && family.map((fam) => {
               return (
                 <div className="rounded overflow-hidden shadow-lg flex flex-col" key={fam.id}>
                 <Link href={`post/${fam.slug}`}>
-                <a>
+                <a className="inline-block sm:mx-auto">
                 <Image src={fam.image.url} alt={fam.title} height={250} width={350}/>
                 </a>
                 </Link>
-                <div className="px-6 py-4 mb-auto">
+                <div className="px-6 py-4 mx-auto">
                   <div className="mb-3">
                     {/* loop through the categories this post might have */}
+                    <Link href={`post/${fam.slug}`}>
                     <a
                       // href="#"
                       className="text-xs text-indigo-600 transition duration-500 ease-in-out"
                     >
                       Family
                     </a>
-                    ,{" "}
-                    <a
+                    </Link>
                     
-                      className="text-xs text-indigo-600 transition duration-500 ease-in-out"
-                    >
-                      Recipe
-                    </a>
+                    ,{" "}
+                    
                   </div>
+                  <Link href={`post/${fam.slug}`}>
                   <a
                     
-                    className="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
+                    className="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out mb-2"
                   >
                     {fam.title}
                   </a>
+                  </Link>
                   <p className="text-gray-500 text-sm">
                     {fam.excerpt}
                   </p>

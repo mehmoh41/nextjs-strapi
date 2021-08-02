@@ -99,7 +99,7 @@ export default function Hero({ posts}) {
               </div>
               <main className="p-5 z-10 absolute">
                 <Link href={`/post/${first.slug}`}>
-                <a className="text-white text-md tracking-tight font-semibold leading-12 font-regular hover:underline text-sm lg:text-2xl">
+                <a className="hidden md:block  text-md tracking-tight font-semibold leading-12 font-regular hover:underline text-sm lg:text-2xl">
                   {first.title}
                 </a>
                 </Link>

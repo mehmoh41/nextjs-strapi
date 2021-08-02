@@ -93,7 +93,7 @@ export async function getStaticProps() {
     {
       type: 'categories.category_name',
       slug: 'family',
-      limit: 4,
+      limit: 3,
       component: "FAMILY"
     },
     {

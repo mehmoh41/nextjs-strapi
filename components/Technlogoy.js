@@ -4,8 +4,8 @@ export default function Technology({posts}) {
     const techs = posts.blogs
     return (
         <>
-          <div className="w-1/12 inline-block"></div>
-          <div className="w-6/12 inline-block mx-auto p-12 sm:p-10 md:p-16 relative">
+          <div className="md:w-1/12 inline-block"></div>
+          <div className="w-6/12 md:w-6/12 inline-block mx-auto p-12 sm:p-10 md:p-16 relative">
           <div className="border-b mb-5 flex justify-between text-sm">
             <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
               <svg
@@ -77,10 +77,10 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
             techs && techs.map((tech) => {
               return (
               
-                <div key={tech.id} className="flex flex-row justify-content-center">
+                <div key={tech.id} className="flex flex-row justify-content-center mt-2">
                   <Link href={`/post/${tech.slug}`}>
                   <a>
-                    <div className="flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                    <div className="hidden md:block items-center bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                     <Image src={tech.image.url} alt={tech.title}  height={192} width={192} />
                     </div>
                   </a>
@@ -98,7 +98,7 @@ C60.338,188.266,55.714,189.346,53.527,192.864z"
                         {tech.title}
                       </a>
                     </Link>
-                    <p className=" text-sm mt-2">
+                    <p className=" hidden md:block text-sm mt-2">
                       {tech.excerpt}
                     </p>
                   </div>
